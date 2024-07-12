@@ -16,19 +16,21 @@ export const FormContext = ({ children }) => {
   });
   const steps = ["Personal Information", "Address Information", "Confirmation"];
   const [errors, setErrors] = useState({});
+  let getLTCalleed=false;
   useEffect(() => {
     const savedData = JSON.parse(localStorage.getItem("formData"));
-    console.log("getLocalstorege");
-    console.log(savedData)
     if (savedData) {
+      getLTCalleed=!getLTCalleed;
       console.log("if getLocalstorege");
       setFormData(savedData);
     }
   }, []);
   
   useEffect(() => {
-    localStorage.setItem("formData", JSON.stringify(formData));
+    if(!getLTCalleed){
+      localStorage.setItem("formData", JSON.stringify(formData));
     console.log("setlocalstorege");
+    } 
   }, [formData]);
 
   const validation = () => {
