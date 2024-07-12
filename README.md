@@ -42,12 +42,14 @@ Created a responsive multi-step form with three steps, ensuring data validation,
 
 ### 4. State Management:
 - Manage form data using React state.
-
-### 5. Local Storage:
+### 5. Auto filling address step:
+- address fileds are filled automatically form current location.
+- 
+### 6. Local Storage:
 - Persist entered data to local storage when the user navigates between steps.
 - Retrieve and pre-fill form fields if the user revisits the form if form is pending to submit.
 
-### 6. Responsive Design:
+### 7. Responsive Design:
 - Ensure the form is responsive and works well on desktop, tablet, and mobile screens.
 
 
