@@ -6,6 +6,7 @@ import axios from "axios";
 const Setp2 = () => {
   const { errors, formData, setFormData, validation, step, setStep } =
     useFormState();
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -18,6 +19,7 @@ const Setp2 = () => {
   const handleBack = () => {
     setStep(step - 1);
   };
+
   //get current address
   const getGeolocation = () => {
     return new Promise((resolve, reject) => {
